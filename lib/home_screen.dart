@@ -11,30 +11,30 @@ class HomeScreen extends StatelessWidget {
         
       ),
         body: ListView(
-          children: const [
-            Divider(),
+          children: [
+            const Divider(),
             ListTile(
-              leading: Icon(Icons.auto_fix_high_outlined, color: Color.fromARGB(255, 47, 69, 195),),
+              leading: const Icon(Icons.auto_fix_high_outlined,),
               title:Text('Hola a todos los kawasakis 1',
-              style: TextStyle(color: Color.fromARGB(255, 47, 69, 195), fontWeight: FontWeight.bold, fontSize: 25.0),),
-              subtitle: Text('Hola esto es un subtitulo'),
-              trailing:Icon(Icons.arrow_drop_down_circle, color: Color.fromARGB(255, 47, 69, 195)),
+              style: Theme.of(context).textTheme.headlineLarge,
+              ),
+              subtitle: const Text('Hola esto es un subtitulo'),
+              trailing:const Icon(Icons.arrow_drop_down_circle,),
             ),
-            Divider(),
-            ListTile(
-              leading: Icon(Icons.accessibility_new, color: Colors.greenAccent,),
+            const Divider(color: Color.fromARGB(255, 47, 69, 195),),
+            const ListTile(
+              leading: Icon(Icons.accessibility_new, ),
               title:Text('Hola a todos los kawasakis 2',
-              style: TextStyle(color: Color.fromARGB(255, 47, 229, 156), fontWeight: FontWeight.bold, fontSize: 22.0),),
+              ),
               subtitle: Text('Hola esto es un subtitulo'),
-              trailing:Icon(Icons.arrow_drop_down_circle, color: Colors.greenAccent),
+              trailing:Icon(Icons.arrow_drop_down_circle, ),
             ),
-            Divider(),
-            ListTile(
-              leading: Icon(Icons.alt_route, color: Color.fromARGB(255, 180,16 , 112),),
-              title:Text('Hola a todos los kawasakis 3',
-              style: TextStyle(color: Color.fromARGB(255, 180, 16, 112), fontWeight: FontWeight.bold, fontSize: 20.0),),
+            const Divider(color: Color.fromARGB(255, 22, 98, 61)),
+            const ListTile(
+              leading: Icon(Icons.alt_route,),
+              title:Text('Hola a todos los kawasakis 3',),
               subtitle: Text('Hola esto es un subtitulo'),
-              trailing:Icon(Icons.arrow_drop_down_circle,color: Colors.blueGrey, ),
+              trailing:Icon(Icons.arrow_drop_down_circle,),
             ),
           ],
         )
