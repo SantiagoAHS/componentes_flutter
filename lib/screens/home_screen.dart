@@ -14,7 +14,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             const Divider(),
             ListTile(
-              leading: const Icon(Icons.input_sharp, color: Color.fromARGB(255, 66, 16, 113),),
+              leading: const Icon(Icons.input_sharp, color: Color.fromARGB(255, 51, 5, 95),),
               title:Text('Entradas',
               style: Theme.of(context).textTheme.headlineLarge,
               ),

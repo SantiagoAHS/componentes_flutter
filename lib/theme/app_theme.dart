@@ -1,19 +1,28 @@
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme{
   //declaracion de color 
-  static const mainColor = Color.fromARGB(255, 77, 222, 222);
-  static const backColor = Color.fromARGB(255, 65, 127, 190);
+  static const mainColor = Color.fromARGB(255, 28, 94, 94);
+  static const backColor = Color.fromARGB(255, 152, 188, 224);
 
   static final ThemeData lightTheme =  ThemeData.light().copyWith(
     scaffoldBackgroundColor: backColor,
         appBarTheme: const AppBarTheme( color: mainColor),
-        textTheme: const TextTheme(
-          headlineLarge: TextStyle(
-            color: mainColor,          fontSize: 25.0,
-            fontWeight: FontWeight.bold,
-            fontFamily: 'sans-serif'
+        textTheme:TextTheme(
+          headlineLarge: GoogleFonts.kalam(
+            color: const Color.fromARGB(255, 54, 25, 59),
+            fontSize: 30.0,
+            fontWeight: FontWeight.w500,
+            decoration: TextDecoration.underline,
+            decorationColor: Colors.green[700],
+            decorationStyle: TextDecorationStyle.dotted,
+            decorationThickness: 3.0,
+            fontStyle:  FontStyle.italic
+            ),
+            bodySmall: GoogleFonts.akatab(
+
             )
         )
   );
