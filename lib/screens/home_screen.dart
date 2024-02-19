@@ -14,7 +14,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             const Divider(),
             ListTile(
-              leading: const Icon(Icons.input_sharp,),
+              leading: const Icon(Icons.input_sharp, color: Color.fromARGB(255, 66, 16, 113),),
               title:Text('Entradas',
               style: Theme.of(context).textTheme.headlineLarge,
               ),
@@ -23,18 +23,20 @@ class HomeScreen extends StatelessWidget {
             ),
             const Divider(color: Color.fromARGB(255, 47, 69, 195),),
              ListTile(
-              leading: const Icon(Icons.list_sharp, ),
+              leading: const Icon(Icons.list_sharp, color: Color.fromARGB(255, 66, 16, 113),),
               title:Text('ListViews.builder ',
               style: Theme.of(context).textTheme.headlineLarge,),
               subtitle: const Text('Scroll infinito'),
               trailing: const Icon(Icons.arrow_drop_down_circle, ),
             ),
             const Divider(color: Color.fromARGB(255, 22, 98, 61)),
-            const ListTile(
-              leading: Icon(Icons.notification_add,),
-              title:Text('Notificaciones ',),
-              subtitle: Text('crear notificaciones'),
-              trailing:Icon(Icons.arrow_drop_down_circle,),
+            ListTile(
+              leading: const Icon(Icons.notification_add, color: Color.fromARGB(255, 66, 16, 113),),
+              title:Text('Notificaciones ',
+              style: Theme.of(context).textTheme.headlineLarge,
+              ),
+              subtitle: const Text('crear notificaciones'),
+              trailing:const Icon(Icons.arrow_drop_down_circle,),
             ),
           ],
         )
