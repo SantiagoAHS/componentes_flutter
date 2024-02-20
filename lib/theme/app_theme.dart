@@ -21,8 +21,15 @@ class AppTheme{
             decorationThickness: 3.0,
             fontStyle:  FontStyle.italic
             ),
-            bodySmall: GoogleFonts.akatab(
-
+            bodySmall: GoogleFonts.pacifico(
+              color: const Color.fromARGB(255, 30, 38, 92),
+              fontSize: 20.0,
+              fontWeight: FontWeight.w200,
+              decoration: TextDecoration.underline,
+              decorationColor: Colors.limeAccent[700],
+              decorationStyle: TextDecorationStyle.wavy,
+              decorationThickness:  2.0,
+              fontStyle: FontStyle.italic
             )
         )
   );

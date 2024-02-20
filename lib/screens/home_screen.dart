@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practica3/theme/app_theme.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -14,29 +15,36 @@ class HomeScreen extends StatelessWidget {
           children: [
             const Divider(),
             ListTile(
-              leading: const Icon(Icons.input_sharp, color: Color.fromARGB(255, 51, 5, 95),),
+              leading: const Icon(Icons.input_sharp, color: AppTheme.mainColor),
               title:Text('Entradas',
               style: Theme.of(context).textTheme.headlineLarge,
               ),
-              subtitle: const Text('Mostrar diferentes widgets para entradas de flutter '),
-              trailing:const Icon(Icons.arrow_drop_down_circle,),
+              subtitle: Text('Mostrar diferentes widgets para entradas de flutter ',
+              style: Theme.of(context).textTheme.bodySmall,
+              ),
+              trailing:const Icon(Icons.arrow_drop_down_circle, color: AppTheme.mainColor,),
             ),
             const Divider(color: Color.fromARGB(255, 47, 69, 195),),
              ListTile(
-              leading: const Icon(Icons.list_sharp, color: Color.fromARGB(255, 66, 16, 113),),
+              leading: const Icon(Icons.list_sharp, color: AppTheme.mainColor),
               title:Text('ListViews.builder ',
               style: Theme.of(context).textTheme.headlineLarge,),
-              subtitle: const Text('Scroll infinito'),
-              trailing: const Icon(Icons.arrow_drop_down_circle, ),
+              subtitle:  Text('Scroll infinito',
+              style: Theme.of(context).textTheme.bodySmall,
+              ),
+              trailing: const Icon(Icons.arrow_drop_down_circle, color: AppTheme.mainColor, ),
             ),
             const Divider(color: Color.fromARGB(255, 22, 98, 61)),
             ListTile(
-              leading: const Icon(Icons.notification_add, color: Color.fromARGB(255, 66, 16, 113),),
+              leading: const Icon(Icons.notification_add,
+              color: AppTheme.mainColor),
               title:Text('Notificaciones ',
               style: Theme.of(context).textTheme.headlineLarge,
               ),
-              subtitle: const Text('crear notificaciones'),
-              trailing:const Icon(Icons.arrow_drop_down_circle,),
+              subtitle: Text('crear notificaciones',
+              style: Theme.of(context).textTheme.bodySmall,
+              ),
+              trailing:const Icon(Icons.arrow_drop_down_circle, color: AppTheme.mainColor,),
             ),
           ],
         )
