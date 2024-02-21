@@ -6,13 +6,14 @@ class AppTheme{
   //declaracion de color 
   static const mainColor = Color.fromARGB(255, 28, 94, 94);
   static const backColor = Color.fromARGB(255, 152, 188, 224);
+  static const darttheme = Color.fromARGB(255, 16, 67, 118);
 
   static final ThemeData lightTheme =  ThemeData.light().copyWith(
     scaffoldBackgroundColor: backColor,
         appBarTheme: const AppBarTheme( color: mainColor),
         textTheme:TextTheme(
           headlineLarge: GoogleFonts.kalam(
-            color: const Color.fromARGB(255, 54, 25, 59),
+            color: const Color.fromARGB(255, 113, 52, 95),
             fontSize: 30.0,
             fontWeight: FontWeight.w500,
             decoration: TextDecoration.underline,
