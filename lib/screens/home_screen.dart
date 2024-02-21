@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:practica3/screens/infinite_list_screen.dart';
+import 'package:practica3/screens/inputs_screen.dart';
+import 'package:practica3/screens/notifications_screen.dart';
 import 'package:practica3/theme/app_theme.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -23,6 +26,12 @@ class HomeScreen extends StatelessWidget {
               style: Theme.of(context).textTheme.bodySmall,
               ),
               trailing:const Icon(Icons.arrow_drop_down_circle, color: AppTheme.mainColor,),
+              onTap: () {
+                final ruta1 = MaterialPageRoute(builder: (context){
+                  return const Inputsscreen();
+                });
+                Navigator.push(context, ruta1);
+              },
             ),
             const Divider(color: Color.fromARGB(255, 47, 69, 195),),
              ListTile(
@@ -33,6 +42,12 @@ class HomeScreen extends StatelessWidget {
               style: Theme.of(context).textTheme.bodySmall,
               ),
               trailing: const Icon(Icons.arrow_drop_down_circle, color: AppTheme.mainColor, ),
+              onTap: () {
+                final ruta2 = MaterialPageRoute(builder: (context){
+                  return const InfiniteListScreen();
+                });
+                Navigator.push(context, ruta2);
+              },
             ),
             const Divider(color: Color.fromARGB(255, 22, 98, 61)),
             ListTile(
@@ -45,6 +60,12 @@ class HomeScreen extends StatelessWidget {
               style: Theme.of(context).textTheme.bodySmall,
               ),
               trailing:const Icon(Icons.arrow_drop_down_circle, color: AppTheme.mainColor,),
+              onTap: () {
+                final ruta3 = MaterialPageRoute(builder: (context){
+                  return const NotificationsScreen();
+                });
+                Navigator.push(context, ruta3);
+              },
             ),
           ],
         )
