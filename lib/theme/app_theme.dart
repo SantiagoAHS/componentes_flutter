@@ -6,18 +6,37 @@ class AppTheme{
   //declaracion de color 
   static const mainColor = Color.fromARGB(255, 28, 94, 94);
   static const backColor = Color.fromARGB(255, 152, 188, 224);
-  static const darttheme = Color.fromARGB(255, 16, 67, 118);
+  static const accent = Color.fromARGB(255, 11, 74, 137);
+  
 
   static final ThemeData lightTheme =  ThemeData.light().copyWith(
     scaffoldBackgroundColor: backColor,
-        appBarTheme: const AppBarTheme( color: mainColor),
+        appBarTheme:AppBarTheme( 
+          color: mainColor,
+          titleTextStyle: GoogleFonts.aBeeZee(
+            color: backColor,
+            fontSize: 28.5,
+            fontWeight: FontWeight.bold,
+          ),
+          ),
+        iconTheme: const IconThemeData(
+          color: Color.fromARGB(255, 17, 32, 100),
+          size: 35.0,
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ButtonStyle(
+            backgroundColor:MaterialStateProperty.all(accent,),
+            foregroundColor: MaterialStateProperty.all(backColor),
+            textStyle: MaterialStateProperty.all(GoogleFonts.pacifico(fontSize: 25.2)),
+          ),
+        ),
         textTheme:TextTheme(
           headlineLarge: GoogleFonts.kalam(
-            color: const Color.fromARGB(255, 113, 52, 95),
-            fontSize: 30.0,
+            color: const Color.fromARGB(255, 91, 14, 67),
+            fontSize: 35.0,
             fontWeight: FontWeight.w500,
             decoration: TextDecoration.underline,
-            decorationColor: Colors.green[700],
+            decorationColor: const Color.fromARGB(255, 158, 191, 160),
             decorationStyle: TextDecorationStyle.dotted,
             decorationThickness: 3.0,
             fontStyle:  FontStyle.italic
@@ -27,10 +46,6 @@ class AppTheme{
               fontSize: 20.0,
               fontWeight: FontWeight.w200,
               decoration: TextDecoration.underline,
-              decorationColor: Colors.limeAccent[700],
-              decorationStyle: TextDecorationStyle.wavy,
-              decorationThickness:  2.0,
-              fontStyle: FontStyle.italic
             )
         )
   );
