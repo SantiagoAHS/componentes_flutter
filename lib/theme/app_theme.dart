@@ -36,7 +36,7 @@ class AppTheme{
             fontSize: 35.0,
             fontWeight: FontWeight.w500,
             decoration: TextDecoration.underline,
-            decorationColor: const Color.fromARGB(255, 158, 191, 160),
+            decorationColor: const Color.fromARGB(255, 95, 7, 76),
             decorationStyle: TextDecorationStyle.dotted,
             decorationThickness: 3.0,
             fontStyle:  FontStyle.italic
@@ -46,7 +46,16 @@ class AppTheme{
               fontSize: 20.0,
               fontWeight: FontWeight.w200,
               decoration: TextDecoration.underline,
-            )
+            ),
+            headlineMedium:GoogleFonts.kalam(
+            color: mainColor,
+            fontSize: 21.0,
+            fontWeight: FontWeight.w500,
+            decorationStyle: TextDecorationStyle.dotted,
+            decorationThickness: 2.0,
+            fontStyle:  FontStyle.italic
+            ),
+
         )
   );
 }
