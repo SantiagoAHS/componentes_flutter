@@ -55,6 +55,12 @@ class AppTheme{
             decorationThickness: 2.0,
             fontStyle:  FontStyle.italic
             ),
+            bodyMedium: GoogleFonts.pacifico(
+              color: mainColor,
+              fontSize: 20.0,
+              fontWeight: FontWeight.w200,
+              decoration: TextDecoration.underline,
+            ),
 
         )
   );
