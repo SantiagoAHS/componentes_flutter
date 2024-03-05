@@ -159,7 +159,7 @@ class _InputsscreenState extends State<Inputsscreen> {
             onChanged: (value){
               setState(() {
                 selectedCheckBoxOption1 = value!;
-                print('Valor de navegador1: $selectedCheckBoxOption1');
+                
               }
             );
           }
@@ -173,7 +173,7 @@ class _InputsscreenState extends State<Inputsscreen> {
             onChanged: (value){
               setState(() {
                 selectedCheckBoxOption2 = value!;
-                print('Valor de navegador2: $selectedCheckBoxOption2');
+                
               }
             );
           }
@@ -187,7 +187,7 @@ class _InputsscreenState extends State<Inputsscreen> {
             onChanged: (value){
               setState(() {
                 selectedCheckBoxOption3 = value!;
-                print('Valor de navegador3: $selectedCheckBoxOption3');
+                
               }
             );
           }
