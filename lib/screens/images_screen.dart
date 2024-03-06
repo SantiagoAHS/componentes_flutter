@@ -18,6 +18,7 @@ class _ImagesScreenState extends State<ImagesScreen> {
       body: ListView(
         children: [
           imageCard(),
+          imageWeb(),
         ]),
     );
   }
@@ -25,9 +26,28 @@ class _ImagesScreenState extends State<ImagesScreen> {
   Card imageCard(){
     return Card(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-      child: const Image(
-            image: AssetImage('assets/imgs/d.jpg'),
-          ),
+      margin: const EdgeInsets.all(20),
+      elevation: 10,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(30),
+        child: Column(
+          children: [
+            const Image(
+                  image: AssetImage('assets/imgs/d5.jpg'),
+                ),
+            Container(
+              padding: const EdgeInsets.all(10),
+              child:Text("Paisaje Japones",style: AppTheme.lightTheme.textTheme.bodySmall,),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget imageWeb(){
+    return Center(
+      child: Image.network('https://miro.medium.com/v2/resize:fit:1400/format:webp/1*ZULFYGMPg0IGkmogo1G0TA.jpeg'),
     );
   }
 }
