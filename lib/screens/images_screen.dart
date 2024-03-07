@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practica3/theme/app_theme.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 class ImagesScreen extends StatefulWidget {
   const ImagesScreen({super.key});
@@ -45,9 +46,24 @@ class _ImagesScreenState extends State<ImagesScreen> {
     );
   }
 
-  Widget imageWeb(){
-    return Center(
-      child: Image.network('https://miro.medium.com/v2/resize:fit:1400/format:webp/1*ZULFYGMPg0IGkmogo1G0TA.jpeg'),
+  Stack imageWeb(){
+    return Stack(
+      children: <Widget>[
+        const Center(
+            child: CircularProgressIndicator()
+        ),
+        Center(
+          child: SizedBox(
+            height: 250,
+            width: 350,
+            child: FadeInImage.memoryNetwork(
+              placeholder: kTransparentImage, 
+              image: 'https://miro.medium.com/v2/resize:fit:1400/format:webp/1*ZULFYGMPg0IGkmogo1G0TA.jpeg')
+            //Image.network()
+            //para mostrar una imangen de la web
+            ),
+        ),
+      ],
     );
   }
 }
