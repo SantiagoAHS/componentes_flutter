@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:practica3/screens/inputs_screen.dart';
 import 'package:practica3/theme/app_theme.dart';
 import 'package:transparent_image/transparent_image.dart';
+import 'package:practica3/screens/home_screen.dart';
+import 'package:practica3/screens/infinite_list_screen.dart';
+import 'package:practica3/screens/notifications_screen.dart';
+
 
 class ImagesScreen extends StatefulWidget {
   const ImagesScreen({super.key});
@@ -10,6 +15,35 @@ class ImagesScreen extends StatefulWidget {
 }
 
 class _ImagesScreenState extends State<ImagesScreen> {
+   int selectedIndex = 0;
+  List screens =const [
+    HomeScreen(),
+    InfiniteListScreen(),
+    NotificationsScreen(),
+    Inputsscreen(),
+  ];
+
+  openScreen(int index){
+    setState(() {
+      MaterialPageRoute ruta= MaterialPageRoute(builder: (context)=> const HomeScreen());
+      switch(index){
+        case 0:ruta = MaterialPageRoute(builder: (context)=> const HomeScreen());
+          break;
+        case 1:ruta =MaterialPageRoute(builder: (context)=> const InfiniteListScreen());
+          break;
+        case 2:ruta = MaterialPageRoute(builder: (context)=> const NotificationsScreen());
+          break;
+        case 3:ruta =MaterialPageRoute(builder: (context)=> const Inputsscreen());
+          break;
+    }
+      selectedIndex = index;
+      Navigator.push(
+        context, 
+        ruta
+        );
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,6 +55,20 @@ class _ImagesScreenState extends State<ImagesScreen> {
           imageCard(),
           imageWeb(),
         ]),
+        bottomNavigationBar: BottomNavigationBar(
+        currentIndex : selectedIndex,
+        backgroundColor: const Color.fromARGB(255, 16, 255, 255),
+        unselectedItemColor: AppTheme.mainColor,
+        onTap: (index) => openScreen(index),
+        items: const[
+          BottomNavigationBarItem(icon: Icon(Icons.home, color: Color.fromARGB(221, 2, 0, 0),), label: "Inicio",),
+          BottomNavigationBarItem(icon: Icon(Icons.data_object,color: Colors.black87,), label: "List"),
+          BottomNavigationBarItem(icon: Icon(Icons.notification_add_outlined, color: Colors.black87,), label: "Noti"),
+          BottomNavigationBarItem(icon: Icon(Icons.list, color: Colors.black87,), label: "Imgs"),
+          BottomNavigationBarItem(icon: Icon(Icons.exit_to_app, color: Colors.black87,), label: "Salida",)
+        ],
+        unselectedLabelStyle: AppTheme.lightTheme.textTheme.headlineSmall,
+      ),
     );
   }
 
