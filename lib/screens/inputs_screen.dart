@@ -17,7 +17,7 @@ class Inputsscreen extends StatefulWidget {
 class InputData {
   final String nombre;
   final bool gustaFlutter;
-  final double sliderValue;
+  final double sliderValue; 
   final int radioOption;
   final bool checkBoxOption1;
   final bool checkBoxOption2;

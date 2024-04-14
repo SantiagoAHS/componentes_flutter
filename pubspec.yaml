@@ -8,11 +8,14 @@ environment:
 
 dependencies:
   cloud_firestore: ^4.15.8
+  firebase_auth: ^4.17.8
   firebase_core: ^2.27.0
+  firebase_database: ^10.4.9
   flutter:
     sdk: flutter
-  google_fonts: ^6.1.0
+  google_fonts: 6.1.0
   transparent_image: ^2.0.1
+  google_sign_in: ^5.2.1
 
 dev_dependencies:
   flutter_test:
@@ -26,3 +29,5 @@ flutter:
     - assets/imgs/d.jpg
     - assets/imgs/d4.jpg
     - assets/imgs/d5.jpg
+    - assets/imgs/logo.png
+    - assets/imgs/logo2.jpeg

@@ -97,6 +97,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.0"
+  firebase_auth:
+    dependency: "direct main"
+    description:
+      name: firebase_auth
+      sha256: "17b841e1b000c3441b8ffceca88f468e078d0443db9643e77541bdfb7a3fd16b"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.17.8"
+  firebase_auth_platform_interface:
+    dependency: transitive
+    description:
+      name: firebase_auth_platform_interface
+      sha256: f294ceef40409a36c819a14280ca864fe487b44033e5276443377c66cb448310
+      url: "https://pub.dev"
+    source: hosted
+    version: "7.1.8"
+  firebase_auth_web:
+    dependency: transitive
+    description:
+      name: firebase_auth_web
+      sha256: "1f231da900fe7ff9f2974f8adcbdb3363c410c24725978afa5dc33e1e7e62e06"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.9.8"
   firebase_core:
     dependency: "direct main"
     description:
@@ -121,6 +145,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.11.5"
+  firebase_database:
+    dependency: "direct main"
+    description:
+      name: firebase_database
+      sha256: "7f6eb8b0a91e8596b53c2ca727acb8cea7cc32b776b8f9252389cce8adfbcbe0"
+      url: "https://pub.dev"
+    source: hosted
+    version: "10.4.9"
+  firebase_database_platform_interface:
+    dependency: transitive
+    description:
+      name: firebase_database_platform_interface
+      sha256: bf28ef7212b90cdbd2a1319f14a16459ec49a29bdbc98a28d9902d18a58d5156
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.5+25"
+  firebase_database_web:
+    dependency: transitive
+    description:
+      name: firebase_database_web
+      sha256: "6fdd5c77826bf73f00f672d48c1ec352a2359fff301bcf52bc661149812fc37a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.3+25"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -148,10 +196,50 @@ packages:
     dependency: "direct main"
     description:
       name: google_fonts
-      sha256: "5b1726fee554d1cc9db1baef8061b126567ff0a1140a03ed7de936e62f2ab98b"
+      sha256: f0b8d115a13ecf827013ec9fc883390ccc0e87a96ed5347a3114cac177ef18e8
       url: "https://pub.dev"
     source: hosted
-    version: "6.2.0"
+    version: "6.1.0"
+  google_sign_in:
+    dependency: "direct main"
+    description:
+      name: google_sign_in
+      sha256: "821f354c053d51a2d417b02d42532a19a6ea8057d2f9ebb8863c07d81c98aaf9"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.4.4"
+  google_sign_in_android:
+    dependency: transitive
+    description:
+      name: google_sign_in_android
+      sha256: "38cef11ed22fc0c9bfa7b00bf7f2d91012138f5613089522917fd26c853be93e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.1.22"
+  google_sign_in_ios:
+    dependency: transitive
+    description:
+      name: google_sign_in_ios
+      sha256: "1e0d4fde6cc07a8ff423f6bc931e83a74163d6af702004bacaee752649fdd2e7"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.7.5"
+  google_sign_in_platform_interface:
+    dependency: transitive
+    description:
+      name: google_sign_in_platform_interface
+      sha256: "1f6e5787d7a120cc0359ddf315c92309069171306242e181c09472d1b00a2971"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.4.5"
+  google_sign_in_web:
+    dependency: transitive
+    description:
+      name: google_sign_in_web
+      sha256: "75cc41ebc53b1756320ee14d9c3018ad3e6cea298147dbcd86e9d0c8d6720b40"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.10.2+1"
   http:
     dependency: transitive
     description:
@@ -383,4 +471,4 @@ packages:
     version: "1.0.4"
 sdks:
   dart: ">=3.2.6 <4.0.0"
-  flutter: ">=3.10.0"
+  flutter: ">=3.16.6"
