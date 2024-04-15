@@ -1,8 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:practica3/screens/terminos.dart';
 import 'package:practica3/theme/app_theme.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HelpScreen extends StatelessWidget {
   const HelpScreen({Key? key}) : super(key: key);
+
+
+  void navigateToTerminate(BuildContext context) {
+    // Navega a la pantalla de registro
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => TerminosPage()),
+    );
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -18,11 +30,12 @@ class HelpScreen extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(20.0),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center, // Centrar el contenido verticalmente
+                crossAxisAlignment: CrossAxisAlignment.center, // Centrar el contenido horizontalmente
                 children: [
                   Image.asset(
                     'assets/imgs/logo.png', // Ruta de la imagen del logo
-                    width: 100, // Tamaño de la imagen
+                    width: 200, // Tamaño de la imagen
                     height: 100,
                   ),
                   const SizedBox(height: 20), // Espacio entre la imagen y el texto
@@ -55,15 +68,44 @@ class HelpScreen extends StatelessWidget {
                     '+522471385294',
                     style: TextStyle(fontSize: 16),
                   ),
+                  TextButton(
+                    onPressed: () => navigateToTerminate(context),
+                    child: const Text('Terminos y Politicas'),
+                    style: TextButton.styleFrom(
+                      primary: const Color.fromARGB(255, 12, 21, 90), // Cambia el color del texto
+                      textStyle: const TextStyle(fontSize: 16), // Cambia el tamaño del texto
+                      padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 40), // Ajusta el padding
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)), // Da forma redondeada al botón
+                    ),
+                  ),
                   const SizedBox(height: 20),
                   const Text(
-                    'Página web:', // Nuevo campo para la página web
+                    'Síguenos en nuestras redes sociales:',
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
-                  const SizedBox(height: 5),
-                  const Text(
-                    'www.evopark.com', // Reemplaza esto con tu página web real
-                    style: TextStyle(fontSize: 16),
+                  const SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      IconButton(
+                        icon: const Icon(FontAwesomeIcons.facebook),
+                        onPressed: () {
+                          // Agrega la lógica para abrir Facebook aquí
+                        },
+                      ),
+                      IconButton(
+                        icon: const Icon(FontAwesomeIcons.twitter),
+                        onPressed: () {
+                          // Agrega la lógica para abrir Twitter aquí
+                        },
+                      ),
+                      IconButton(
+                        icon: const Icon(FontAwesomeIcons.instagram),
+                        onPressed: () {
+                          // Agrega la lógica para abrir Instagram aquí
+                        },
+                      ),
+                    ],
                   ),
                 ],
               ),

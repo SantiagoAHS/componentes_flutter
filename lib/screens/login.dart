@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:practica3/screens/infinite_list_screen.dart';
 import 'package:practica3/screens/registerlogin.dart';
+import 'package:practica3/screens/terminos.dart';
 import 'package:practica3/theme/app_theme.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -50,6 +51,14 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
+  void navigateToTerminate(BuildContext context) {
+    // Navega a la pantalla de registro
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => TerminosPage()),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,6 +85,9 @@ class LoginScreen extends StatelessWidget {
                     filled: true, // Agregar fondo al campo de texto
                     fillColor: AppTheme.fondo2, // Co
                   ),
+                  style: const TextStyle(
+                    color: Colors.black, // Cambia el color del texto en el campo de texto
+                  ),
                 ),
               ),
               const SizedBox(height: 20),
@@ -90,6 +102,9 @@ class LoginScreen extends StatelessWidget {
                     fillColor: AppTheme.fondo2, // Co
                   ),
                   obscureText: true,
+                  style: const TextStyle(
+                    color: Colors.black, // Cambia el color del texto en el campo de texto
+                  ),
                 ),
               ),
               const SizedBox(height: 20),
@@ -113,7 +128,18 @@ class LoginScreen extends StatelessWidget {
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)), // Da forma redondeada al botón
                 ),
               ),
-              const SizedBox(height: 100), // Espacio entre la imagen y el nombre del creador
+              const SizedBox(height: 50),
+              TextButton(
+                onPressed: () => navigateToTerminate(context),
+                child: const Text('Terminos y Politicas'),
+                style: TextButton.styleFrom(
+                  primary: const Color.fromARGB(255, 12, 21, 90), // Cambia el color del texto
+                  textStyle: const TextStyle(fontSize: 16), // Cambia el tamaño del texto
+                  padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 40), // Ajusta el padding
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)), // Da forma redondeada al botón
+                ),
+              ),
+              const SizedBox(height: 40), // Espacio entre la imagen y el nombre del creador
                 const Padding(
                   padding: EdgeInsets.only(bottom: 20),
                   child: Text(

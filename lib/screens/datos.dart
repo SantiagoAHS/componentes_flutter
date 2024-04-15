@@ -105,6 +105,9 @@ class _UserDataScreenState extends State<UserDataScreen> {
                     fillColor: AppTheme.fondo2,
                   ),
                   controller: _nameController,
+                  style: const TextStyle(
+                    color: Colors.black, // Cambia el color del texto en el campo de texto
+                  ),
                 ),
                 const SizedBox(height: 10),
                 TextFormField(
@@ -115,6 +118,9 @@ class _UserDataScreenState extends State<UserDataScreen> {
                     fillColor: AppTheme.fondo2,
                   ),
                   controller: _phoneNumberController,
+                  style: const TextStyle(
+                    color: Colors.black, // Cambia el color del texto en el campo de texto
+                  ),
                 ),
                 const SizedBox(height: 20),
                 const Text(
@@ -130,6 +136,9 @@ class _UserDataScreenState extends State<UserDataScreen> {
                     fillColor: AppTheme.fondo2,
                   ),
                   controller: _carModelController,
+                  style: const TextStyle(
+                    color: Colors.black, // Cambia el color del texto en el campo de texto
+                  ),
                 ),
                 const SizedBox(height: 10),
                 TextFormField(
@@ -140,6 +149,9 @@ class _UserDataScreenState extends State<UserDataScreen> {
                     fillColor: AppTheme.fondo2,
                   ),
                   controller: _carPlateController,
+                  style: const TextStyle(
+                    color: Colors.black, // Cambia el color del texto en el campo de texto
+                  ),
                 ),
                 const SizedBox(height: 20),
                 Center(

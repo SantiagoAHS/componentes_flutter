@@ -136,7 +136,7 @@ class FirebaseService {
       print('Error al obtener los pagos del usuario en Firestore: $e');
       // Manejar el error según sea necesario
       return [];
-    }
+    } 
   }
 }
 

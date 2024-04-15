@@ -83,6 +83,9 @@ class _TarjetaScreenState extends State<TarjetaScreen> {
                   maxLength: 16,
                   keyboardType: TextInputType.number,
                   controller: _numeroTarjetaController,
+                  style: const TextStyle(
+                    color: Colors.black, // Cambia el color del texto en el campo de texto
+                  ),
                 ),
                 const SizedBox(height: 10),
                 TextFormField(
@@ -93,6 +96,9 @@ class _TarjetaScreenState extends State<TarjetaScreen> {
                     fillColor: AppTheme.fondo2,
                   ),
                   controller: _nombreTitularController,
+                  style: const TextStyle(
+                    color: Colors.black, // Cambia el color del texto en el campo de texto
+                  ),
                 ),
                 const SizedBox(height: 10),
                 Row(
@@ -108,6 +114,9 @@ class _TarjetaScreenState extends State<TarjetaScreen> {
                         maxLength: 4,
                         keyboardType: TextInputType.datetime,
                         controller: _fechaExpiracionController,
+                        style: const TextStyle(
+                    color: Colors.black, // Cambia el color del texto en el campo de texto
+                  ),
                       ),
                     ),
                     const SizedBox(width: 10),
@@ -122,6 +131,9 @@ class _TarjetaScreenState extends State<TarjetaScreen> {
                         maxLength: 3,
                         keyboardType: TextInputType.number,
                         controller: _cvvController,
+                        style: const TextStyle(
+                    color: Colors.black, // Cambia el color del texto en el campo de texto
+                  ),
                       ),
                     ),
                   ],

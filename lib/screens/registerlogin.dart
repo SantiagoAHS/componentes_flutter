@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:practica3/screens/terminos.dart';
 import 'package:practica3/theme/app_theme.dart';
 
 class RegisterLoginScreen extends StatelessWidget {
@@ -54,6 +55,14 @@ class RegisterLoginScreen extends StatelessWidget {
     }
   }
 
+  void navigateToTerminate(BuildContext context) {
+    // Navega a la pantalla de registro
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => TerminosPage()),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,6 +89,9 @@ class RegisterLoginScreen extends StatelessWidget {
                     filled: true,
                     fillColor: AppTheme.fondo2,
                   ),
+                  style: const TextStyle(
+                    color: Colors.black, // Cambia el color del texto en el campo de texto
+                  ),
                 ),
                 const SizedBox(height: 20),
                 TextField(
@@ -91,6 +103,9 @@ class RegisterLoginScreen extends StatelessWidget {
                     fillColor: AppTheme.fondo2,
                   ),
                   obscureText: true,
+                  style: const TextStyle(
+                    color: Colors.black, // Cambia el color del texto en el campo de texto
+                  ),
                 ),
                 const SizedBox(height: 20),
                 ElevatedButton(
@@ -116,6 +131,17 @@ class RegisterLoginScreen extends StatelessWidget {
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)), // Da forma redondeada al botón
                 ),
                 ),
+                const SizedBox(height: 50),
+              TextButton(
+                onPressed: () => navigateToTerminate(context),
+                child: const Text('Terminos y Politicas'),
+                style: TextButton.styleFrom(
+                  primary: const Color.fromARGB(255, 12, 21, 90), // Cambia el color del texto
+                  textStyle: const TextStyle(fontSize: 16), // Cambia el tamaño del texto
+                  padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 40), // Ajusta el padding
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)), // Da forma redondeada al botón
+                ),
+              ),
                 const SizedBox(height: 70), // Espacio entre la imagen y el nombre del creador
                   const Center(
                     child: Padding(
